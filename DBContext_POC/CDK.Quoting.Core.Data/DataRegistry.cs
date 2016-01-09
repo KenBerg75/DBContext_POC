@@ -10,11 +10,8 @@ namespace CDK.Quoting.Core.Data
     public class DataRegistry : Registry
     {
         public DataRegistry()
-        {            
-            //ForSingletonOf<IDbConnectionFactory>().Use<DbConnectionFactory>()
-            //    .Ctor<string>().Is("Quoting.Database");  // Connection String Name
-
-
+        {
+            For<DbContext>().Use(DbContextFactory.Create());
         }
     }
 }
