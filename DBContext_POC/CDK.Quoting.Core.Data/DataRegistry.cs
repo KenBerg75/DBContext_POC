@@ -11,7 +11,11 @@ namespace CDK.Quoting.Core.Data
     {
         public DataRegistry()
         {
-            For<DbContext>().Use(DbContextFactory.Create());
+            // Different ways consuming apps can create the context if they do not use the Base Repository
+            //For<DbContext>().Use(DbContextFactory.Create());
+            
+            // Create with a different connection provider
+            //For<DbContext>().Use(DbContextFactory.Create("Some Connection String Name"));
         }
     }
 }

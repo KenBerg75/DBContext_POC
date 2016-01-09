@@ -13,7 +13,7 @@ namespace CDK.Quoting.Core.Data
     public static class DbContextFactory
     {
         /// <summary>
-        /// Creates a DbContext using the default connetion string name for the system - "Quoting.Database"
+        /// Creates a DbContext using the default connetion string name for the system
         /// </summary>
         /// <returns></returns>
         public static DbContext Create()
